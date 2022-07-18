@@ -10,6 +10,10 @@ namespace DesignPatternTutorial
             Console.WriteLine($"{Environment.NewLine}FactoryMethod => end production!{Environment.NewLine}");
 
             new AbstractFactory.ProductionLine().RunProductoin();
+
+            Singleton.Instance.DoSomething();
+
+            new HumanCreator().CreateHuman();
         }
     }
 }
