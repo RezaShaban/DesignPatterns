@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatternTutorial.Adapter;
+using System;
 
 namespace DesignPatternTutorial
 {
@@ -18,6 +19,11 @@ namespace DesignPatternTutorial
 
             Console.WriteLine("Builder");
             new HumanCreator().CreateHuman();
+
+
+            Console.WriteLine("Adapter");
+            ITarget target = new Adapter.Adapter(new Adaptee());
+            Console.WriteLine(target.GetRequest());
         }
     }
 }
